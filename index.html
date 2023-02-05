@@ -63,23 +63,26 @@
         <div class="container">
           <img class="square" src="./assets/shared/pattern-square.svg" alt="" />
           <div class="mid-left">
-            <picture class="img-orange">
-              
-              <!-- <source
+            <picture class="img-orange overlay">
+              <source
+                media="(max-width: 700px)"
+                srcset="./assets/mobile/image-phone-and-keyboard.jpg"
+              />
+              <source
                 media="(max-width: 1200px)"
-                srcset="./assets/tablet/image-kb-and-phone.png"
-              /> -->
-              <img src="./assets/shared/image-kb-and-phone.png" alt="" />
+                srcset="./assets/tablet/image-phone-and-keyboard.jpg"
+              />
+              <img src="./assets/desktop/image-phone-and-keyboard.jpg" alt="" />
             </picture>
             <picture class="kb-glass">
-              <!-- <source
+              <source
                 media="(max-width: 700px)"
                 srcset="./assets/mobile/image-glass-and-keyboard.jpg"
-              /> -->
-              <!-- <source
+              />
+              <source
                 media="(max-width: 1200px)"
                 srcset="./assets/tablet/image-glass-and-keyboard.jpg"
-              /> -->
+              />
               <img src="./assets/desktop/image-glass-and-keyboard.jpg" alt="" />
             </picture>
           </div>

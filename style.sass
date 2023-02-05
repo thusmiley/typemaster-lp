@@ -132,29 +132,24 @@ main
 @media only screen and (max-width: 700px)        
     .hero
         margin-top: 64px
-        position: relative
         .container
-            height: 625px
+            height: auto
             flex-direction: column
     .hero-left
         margin-right: 0
         max-width: 100%
-        margin-bottom: 4px
+        margin-bottom: 64px
         p
             margin: 32px 0 
     .hero-right
-        top: 330px
+        position: relative
         left: 0
+        width: 100%
         img
-            height: 331px
-@media only screen and (max-width: 480px)        
-    .hero-right
-        left: calc(8px + 1.5625vw)
+            max-width: 480px
 @media only screen and (max-width: 335px)        
     .hero-cta a 
         font-size: 14px
-    .hero-right
-        top: 350px
 
 // Mid section  
 .mid-section .container
@@ -175,9 +170,22 @@ main
     img
         max-height: 480px
     .img-orange
+        position: relative
         margin-right: 30px
         border-radius: 20px
         box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2)
+.overlay:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(241, 103, 24, 0.8)
+    border-radius: 20px
+    img
+        mix-blend-mode: multiply
+
 .mid-right
     margin-left: 125px
     width: 30%
@@ -205,35 +213,21 @@ main
             line-height: 36px   
 @media only screen and (max-width: 700px)        
     .mid-section .container
-        margin-top: 60px  
-        position: relative
+        margin-top: 24px  
     .mid-left    
-        position: absolute
         justify-content: flex-end
-        right: 0
-        width: 120%
-        .img-orange
-            margin-right: 24px
-            min-width: 129px
-        .kb-glass
-            width: 220px            
+        max-height: 386px
         img
-            height: 193px
-            min-width: 100%
+            min-height: 193px      
     .mid-right
         flex-direction: column
         text-align: center
-        margin-top: 250px
+        margin-top: 75px
         h2
             margin-bottom: 24px 
             margin-right: 0
             padding: 0 30px
-@media only screen and (max-width: 480px)        
-    .mid-left
-        right: calc(8px + 1.5625vw)          
-@media only screen and (max-width: 335px)        
-    .mid-section .container
-        margin-top: 85px  
+
 // Features        
 .features
     margin-top: 168px
