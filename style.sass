@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap')
+
+$orange:rgb(241, 103, 24)
+$light-orange:  #FF9B62
+$dark-blue: #162542
+$grey: #7B8BAD
+$light-grey: #E8EFF2
+$white: #fff
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Barlow', sans-serif
+    color: $dark-blue
+
+h1
+    font-size: 56px
+h2
+    font-size: 36px
+h3
+    font-size: 24px
+    line-height: 28px
+p
+    font-size: 16px
+    line-height: 26px    
+    color: $grey
+
+img
+    max-width: 100%
+    display: block
+    border-radius: 20px
+
+a
+    text-decoration: none
+    transition: 0.3s ease  
+    padding: 16px 26px
+    border-radius: 8px
+    font-size: 16px
+    line-height: 26px
+    color: $dark-blue
+.container
+    max-width: 1110px
+    margin: 0 auto
+
+@media only screen and (max-width: 1200px)        
+    .container
+        max-width: 689px
+@media only screen and (max-width: 700px)        
+    .container
+        max-width: 327px
+@media only screen and (max-width: 480px)        
+    .container
+        max-width: 100%
+        padding-left: calc(8px + 1.5625vw)
+        padding-right: calc(8px + 1.5625vw)
+
+// Header    
+header .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 55px
+    .cta
+        background-color: $light-grey
+        &:hover
+            background-color: $dark-blue
+            color: $white
+    img
+        border-radius: 0            
+@media only screen and (max-width: 1200px)        
+    header .container
+        margin-top: 40px
+@media only screen and (max-width: 700px)        
+    header .container
+        margin-top: 23px
+    a
+        padding: 11px 13px        
+// Hero      
+main
+    overflow: hidden
+
+.hero
+    margin-top: 85px
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        .square
+            position: absolute
+            top: 0
+            right: -285px
+.hero-left
+    margin-right: 125px
+    p
+        margin: 24px 0 40px 0
+    .hero-cta
+        display: flex
+        align-items: center  
+    .pre-order
+        background-color: $orange
+        color: $white
+        &:hover
+            background-color: $light-orange
+    .release
+        cursor: default                
+        color: $grey
+        margin-left: 9px
+@media only screen and (max-width: 1200px)     
+    .square
+        display: none   
+    .hero
+        margin-top: 62px
+        .container
+            height: 425px
+    .hero-left
+        margin-right: 69px
+        max-width: 370px 
+        h1
+            font-size: 48px
+            line-height: 48px
+        p
+            margin: 34px 0 39px 0
+    .hero-right
+        position: absolute    
+        top: 0
+        right: -200px
+        max-width: 478px
+@media only screen and (max-width: 700px)        
+    .hero
+        margin-top: 64px
+        position: relative
+        .container
+            height: 625px
+            flex-direction: column
+    .hero-left
+        margin-right: 0
+        max-width: 100%
+        margin-bottom: 4px
+        p
+            margin: 32px 0 
+    .hero-right
+        top: 330px
+        left: 0
+        img
+            height: 331px
+@media only screen and (max-width: 480px)        
+    .hero-right
+        left: calc(8px + 1.5625vw)
+@media only screen and (max-width: 335px)        
+    .hero-cta a 
+        font-size: 14px
+    .hero-right
+        top: 350px
+
+// Mid section  
+.mid-section .container
+    position: relative
+    margin-top: 30px  
+    width: 100%
+    .square
+        position: absolute
+        bottom: 0
+        left: -285px
+.mid-section .container,
+.mid-left     
+    display: flex
+    align-items: center
+    justify-content: space-between
+.mid-left    
+    width: 70%
+    img
+        max-height: 480px
+    .img-orange
+        margin-right: 30px
+        border-radius: 20px
+        box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2)
+.mid-right
+    margin-left: 125px
+    width: 30%
+    h2
+        margin-bottom: 27px
+
+@media only screen and (max-width: 1200px)     
+    .mid-section .container
+        margin-top: 40px  
+        flex-direction: column
+    .mid-left    
+        width: 100%
+        img
+            max-height: auto
+    .mid-right
+        display: flex
+        align-items: center
+        margin-left: 0
+        width: 100%
+        margin-top: 72px
+        h2
+            margin-bottom: 0 
+            margin-right: 80px
+            font-size: 32px
+            line-height: 36px   
+@media only screen and (max-width: 700px)        
+    .mid-section .container
+        margin-top: 60px  
+        position: relative
+    .mid-left    
+        position: absolute
+        justify-content: flex-end
+        right: 0
+        width: 120%
+        .img-orange
+            margin-right: 24px
+            min-width: 129px
+        .kb-glass
+            width: 220px            
+        img
+            height: 193px
+            min-width: 100%
+    .mid-right
+        flex-direction: column
+        text-align: center
+        margin-top: 250px
+        h2
+            margin-bottom: 24px 
+            margin-right: 0
+            padding: 0 30px
+@media only screen and (max-width: 480px)        
+    .mid-left
+        right: calc(8px + 1.5625vw)          
+@media only screen and (max-width: 335px)        
+    .mid-section .container
+        margin-top: 85px  
+// Features        
+.features
+    margin-top: 168px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 30px
+.feature    
+    h3
+        margin: 48px 0 24px 0
+        max-width: 14ch
+
+@media only screen and (max-width: 1200px)     
+    .features
+        margin-top: 142px
+        grid-template-columns: repeat(2, 1fr)
+        gap: 70px
+        h3
+            margin: 40px 0 24px 0
+@media only screen and (max-width: 700px)        
+    .features
+        margin-top: 111px
+        grid-template-columns: repeat(1, 1fr)
+        gap: 64px
+    .feature    
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        h3
+            margin: 48px auto 24px auto
+@media only screen and (max-width: 480px)        
+    .feature p 
+        max-width: 40ch
+// Footer        
+footer
+    margin-top:  128px
+    margin-bottom: 39px
+    text-align: center   
+    span
+        font-weight: bold
+
+@media only screen and (max-width: 1200px)     
+    footer
+        margin-top:  142px
+        margin-bottom: 43px
+@media only screen and (max-width: 700px)     
+    footer
+        margin-top:  96px
+        margin-bottom: 50px
